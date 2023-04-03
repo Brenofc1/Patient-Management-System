@@ -1,0 +1,19 @@
+<script>
+    /// this gets rendered into the head of the calender page.
+document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          initialDate: '2023-02-07',
+          headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+          },
+            events: 
+            {{events}}
+            
+        });    
+        calendar.render();
+      });
+</script>
